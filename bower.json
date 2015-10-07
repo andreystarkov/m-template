@@ -1,0 +1,19 @@
+{
+  "name": "M-Restorator",
+  "version": "0.1.0",
+  "authors": [
+    "Andrey Starkov <im@andreystarkov.ru>"
+  ],
+  "description": "Something nice",
+  "main": "index.php",
+  "license": "MIT",
+  "devDependencies": {
+    "jquery": "latest",
+    "jquery-mousewheel": "~3.1.13"
+  },
+  "dependencies": {
+    "animate.less": "*",
+    "jquery.stellar": "~0.6.2",
+    "snackbarjs": "~1.0.0"
+  }
+}

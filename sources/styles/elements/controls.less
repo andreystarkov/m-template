@@ -1,0 +1,84 @@
+section .btn-more, #news-feed .btn-more, #instagram-feed .btn-more, #instagram-recent .btn,#instagram-recent .btn-more {
+    span { font-size: 20px; display: inline-block; margin-right: 8px;
+        color: #773434; margin-top:3px;
+    }
+    transition: 0.4s ease-in-out color;
+    color:rgba(57, 35, 35, 0.4);
+    font-size:18px;
+    &:hover {
+        color:rgba(57, 35, 35, 1);
+        span {
+        -webkit-animation-name: refresh;
+              animation-name: refresh;
+      -webkit-animation-duration: 1s;
+              animation-duration: 1s;
+      -webkit-animation-iteration-count: infinite;
+              animation-iteration-count: infinite;
+      -webkit-animation-timing-function: linear;
+              animation-timing-function: linear;
+        }
+    }
+}
+
+.btn-menu {
+    position: relative;
+    float: right;
+    height: 45px;
+    width: 45px;
+    margin-right:20px;
+    margin-top: 18px;
+    overflow: hidden;
+    text-indent: 100%;
+    white-space: nowrap;
+    color: transparent;
+    span {
+        top: 21px;
+        left: 8px;
+        -webkit-transition: background 0.2s 0.5s;
+        -moz-transition: background 0.2s 0.5s;
+        transition: background 0.2s 0.5s;
+    }
+    span::before {
+        bottom: 8px;
+    }
+    span::after {
+        top: 8px;
+    }
+}
+.btn-menu span,.btn-menu span::before,.btn-menu span::after {
+    position: absolute;
+    width: 28px;
+    height: 3px;
+    background-color: #FFF;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+.btn-menu span::before, .btn-menu span:after {
+    content: '';
+    left: 0;
+    -webkit-transition: -webkit-transform 0.2s 0.5s;
+    -moz-transition: -moz-transform 0.2s 0.5s;
+    transition: transform 0.2s 0.5s;
+}
+.btn-menu.toggled {
+    span {
+        background-color: rgba(255, 255, 255, 0);
+    }
+    span::before {
+        -webkit-transform: translateY(8px) rotate(-45deg);
+        -moz-transform: translateY(8px) rotate(-45deg);
+        -ms-transform: translateY(8px) rotate(-45deg);
+        -o-transform: translateY(8px) rotate(-45deg);
+        transform: translateY(8px) rotate(-45deg);
+    }
+    span::after {
+        -webkit-transform: translateY(-8px) rotate(45deg);
+        -moz-transform: translateY(-8px) rotate(45deg);
+        -ms-transform: translateY(-8px) rotate(45deg);
+        -o-transform: translateY(-8px) rotate(45deg);
+        transform: translateY(-8px) rotate(45deg);
+    }
+}
+.btn-menu.toggled span::before, .btn-menu.toggled span::after {
+    background-color: white;
+}

@@ -1,0 +1,6 @@
+node_modules/
+_/
+.sass-cache/
+*.zip
+*.rar
+*.7z
