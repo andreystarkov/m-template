@@ -25,19 +25,19 @@ var gulp = require('gulp'),
     runSequence = require('run-sequence').use(gulp);
 
     var JSFiles = [
+     'sources/libs/classie/classie.js',
      'sources/libs/bootstrap-material-design/dist/js/material.min.js',
      'sources/libs/bootstrap-material-design/dist/js/ripples.min.js',
      'sources/libs/jquery-waypoints/lib/jquery.waypoints.min.js',
-     'sources/libs/jquery.stellar/jquery.stellar.min.js',
+     'sources/libs/snackbarjs/src/snackbar.js',
      'sources/libs/vivus/dist/vivus.min.js',
      'sources/libs/flexslider/jquery.flexslider-min.js',
      'sources/libs/fancybox/source/jquery.fancybox.js',
-     'sources/js/vendor/detect.min.js',
-     'sources/libs/classie/classie.js',
+     'sources/libs/vide/dist/jquery.vide.min.js',
      'sources/libs/wow/dist/wow.min.js',
      'sources/js/vendor/transit.min.js',
-     'sources/libs/snackbarjs/src/snackbar.js',
      'sources/js/instagram.js',
+     'sources/js/scroll.js',
      'sources/js/slider.js',
      'sources/js/top-navigation.js',
      'sources/js/scripts.js',
@@ -58,24 +58,14 @@ var gulp = require('gulp'),
 
   gulp.task('less', function() {
     gulp.src('sources/styles/styles.less')
-      .pipe(sourcemaps.init())
+   //   .pipe(sourcemaps.init())
       .pipe(less())
-      .pipe(sourcemaps.write('./'))
-      .pipe(gulp.dest('sources/css'))
-      .pipe(size({
-          title: 'Less ok'
-      }));
+   //   .pipe(sourcemaps.write('./'))
+   // .pipe(rename('app.min.css'))
+      .pipe(gulp.dest('build/css'))
+      .pipe(notify('ok'));
   });
 
-  gulp.task('css-min', function() {
-    gulp.src(['sources/css/fonts.css', 'sources/css/styles.css', 'sources/css/queries.css'])
-      .pipe(sourcemaps.init())
-      .pipe(concat('app.css'))
-      .pipe(gulp.dest('build/css'))
-      .pipe(size({
-          title: 'CSS Merged/Minifed'
-      }));
-  });
 
 gulp.task('js-merge', function() {
   return gulp.src(JSFiles)
@@ -135,21 +125,15 @@ gulp.task('build', function(callback) {
     runSequence(
         'html',
         'less',
-        'css-min',
         'js-merge',
-        'images',
-        'svg',
-        'fonts',
-        'videos',
         'watch',
         callback)
 });
 
 gulp.task('watch', function () {
     gulp.watch('sources/styles/**/*.less', ['less']);
-    gulp.watch('sources/css/*.css', ['css-min']);
     gulp.watch('sources/js/*.js', ['js-merge']);
     gulp.watch('sources/*.php', ['html']);
 });
 
-gulp.task('default', ['less', 'css-min']);
+gulp.task('default', ['less' ]);

@@ -76072,7 +76072,7 @@ header {
 header a {
   color: #fff;
   text-transform: uppercase;
-  font-size: 1.4em;
+  font-size: 1.15em;
   font-family: RobotoDraft;
 }
 header a.login {
@@ -76155,7 +76155,7 @@ header .member-actions {
 #nav > ul.links > li > a:not(.button) {
   border: 0;
   font-family: RobotoDraft;
-  font-size: 1.4em;
+  font-size: 1.1em;
   border-top: solid 1px rgba(255, 255, 255, 0.15);
   color: inherit;
   display: block;
@@ -77915,6 +77915,21 @@ fieldset[disabled] .media-column > .btn:hover.active {
 .cd-slider-nav li,
 .cd-slider-nav a {
   height: 100%;
+}
+.inner-header {
+  padding: 222px;
+}
+.inner-header .overlay {
+  background: rgba(30, 28, 27, 0.55);
+  transition: 0.8s ease-in-out all;
+  z-index: 6;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 
 /*# sourceMappingURL=styles.css.map */

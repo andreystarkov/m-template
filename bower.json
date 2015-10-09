@@ -8,8 +8,11 @@
   "main": "index.php",
   "license": "MIT",
   "devDependencies": {
+    "BigVideo": "BigVideo.js#~1.1.5",
     "jquery": "latest",
-    "jquery-mousewheel": "~3.1.13"
+    "jquery-mousewheel": "~3.1.13",
+    "skrollr": "scrollr#~0.6.30",
+    "vide": "~0.3.7"
   },
   "dependencies": {
     "animate.less": "*",

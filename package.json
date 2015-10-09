@@ -6,6 +6,7 @@
   "license": "ISC",
   "dependencies": {
     "del": "^2.0.2",
+    "ffmpeg-node": "0.0.2",
     "gulp": "^3.9.0",
     "gulp-autoprefixer": "^3.0.2",
     "gulp-changed": "^1.3.0",
@@ -30,6 +31,8 @@
     "run-sequence": "^1.1.4"
   },
   "devDependencies": {
+    "ffmpeg": "0.0.4",
+    "grunt": "^0.4.5",
     "gulp-concat-css": "^2.2.0"
   }
 }
