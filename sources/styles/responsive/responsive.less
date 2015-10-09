@@ -1,0 +1,33 @@
+@import "mobile.less";
+@import "desktop.less";
+
+@media screen and (max-width: 991px) {
+	.mobile-all();
+}
+
+.responsiveMax(@maxWidth; @rules) {
+    @media only screen and (max-width: @maxWidth) {
+        @rules();
+    }
+}
+.responsiveMin(@maxWidth; @rules) {
+    @media only screen and (max-width: @maxWidth) {
+        @rules();
+    }
+}
+
+.responsiveMax(991px, {
+	.mobile-all();
+});
+
+.responsiveMax(640px, {
+	.mobile-medium();
+});
+
+.responsiveMax(480px, {
+	.mobile-small();
+});
+
+.responsiveMin(768px, {
+	.desktop-all();
+});

@@ -32,6 +32,7 @@
         display: block;
         position: relative;
         text-align: center;
+        z-index:7;
         i {
             padding: 0.5em;
             border-radius: 50%;
@@ -78,5 +79,87 @@
         font-family: 'Open Sans Condensed';
         font-weight: 500;
         text-transform: none;
+    }
+}
+
+
+.section-background {
+    margin-top: 0px;
+    background: url("../img/polygonal-bg.jpg") repeat-x center center;
+    padding-bottom: 190px;
+    position: relative;
+
+    &.section-background-light {
+        background: @sectionLightBrown;
+        h2 { color: lighten(@one-white,8%); text-shadow: 0 1px 3px rgba(0,0,0,0.7); }
+        p { color: mix(@brownGray, @one-white,20%); }
+        .logo-placeholder svg * {
+            fill: mix(@brownGray, @one-white,25%);
+            stroke: mix(@brownGray, @one-white,35%);
+        }
+        .overlay { display: none; }
+    }
+
+    &.section-strange {
+        background: @brownGray;
+        h2 { color: mix(@brownGray, @one-white,10%); }
+        p { color: mix(@brownGray, @one-white,20%); }
+        .logo-placeholder svg * {
+            fill: mix(@brownGray, @one-white,25%);
+            stroke: mix(@brownGray, @one-white,35%);
+        }
+    }
+
+    .container {
+        position:relative;
+        z-index:2;
+    }
+    .overlay {
+        position: absolute;
+        width:100%;
+        height:100%;
+        left:0; right: 0;
+        top:0; bottom: 0;
+        opacity:0.6;
+        //background: url("../img/polygonal-bg.jpg") no-repeat center center;
+        background:#191817;
+    }
+    h2 { color: lighten(@one-white,8%); text-shadow: 0 1px 3px rgba(0,0,0,0.7); }
+    p { color: mix(@brownGray, @one-white,20%); }
+    h2 {
+        font-family:'Roboto';
+        font-weight: 200;
+        margin: 0 0 20px 0;
+    }
+    p {
+        font-size:1em;
+        font-style:italic;
+    }
+    .btn {
+        margin-top: 10px;
+    }
+
+    .logo-placeholder-big {
+        z-index:3;
+        width:95%;
+        position: absolute;
+        bottom: -320px;
+        left: 50%;
+        svg {
+            width:85%;
+            height:85%;
+        }
+    }
+
+    .logo-placeholder {
+        width: 300px;
+        height: 250px;
+        position: absolute;
+        bottom: -250px;
+        left: 50%;
+        svg {
+            width:50%;
+            height:50%;
+        }
     }
 }
