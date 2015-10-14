@@ -28,34 +28,14 @@
     <link rel="icon" type="image/png" href="img/ico-32.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="img/ico-16.png" sizes="16x16" />
 
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css" />
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />
-    <link rel="stylesheet" href="fonts/line/font.css" />
-    <link rel="stylesheet" href="fonts/outline/font.css" />
-    <link rel="stylesheet" href="fonts/et-line-font/styles.css" />
-
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,300italic,100,100italic,300,400italic,500,500italic,700,700italic,900,900italic&subset=latin,cyrillic" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,300italic,400italic,700,700italic&subset=latin,cyrillic" />
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />
 
-    <link rel="stylesheet" href="fonts/robotodraft/font.css" />
-    <link rel="stylesheet" href="css/styles.css" />
-
+    <link rel="stylesheet" href="css/styles.min.css" />
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
 </head>
 <body id="top">
-
-    <nav class="cd-3d-nav-container">
-        <ul class="cd-3d-nav">
-            <li class="cd-selected"><a href="#1"></a</li>
-            <li><a href="#2"></a></li>
-            <li><a href="#3"></a></li>
-            <li><a href="#4"></a></li>
-            <li><a href="#5"></a></li>
-        </ul>
-        <span class="cd-marker color-1"></span>
-    </nav>
 
         <section class="navigation top-navigation" id="top-navigation">
             <header>
@@ -114,7 +94,7 @@
         <div class="down-arrow floating-arrow"><a href="#"><i class="fa fa-angle-down"></i></a></div>
         <div class="overlay"></div>
         <img src="img/fish/1.jpg" class="background-image img-parallax"
-         data-parallax='{"y" : 200, "smoothness": 70, "rotateY": 15, "scale" : 1.25, "perspective": 700}' />
+        data-parallax='{ "y" : -100, "duration": 200, "rotateY": 15, "scale" : 1.25}' />
     </section>
 
 
@@ -168,7 +148,7 @@
         </div>
         <div class="overlay"></div>
         <img src="img/sample/food-1.jpg" class="background-image img-parallax"
-         data-parallax='{ "y" : -100, "smoothness": 100, "scale": 1.05, "rotateY": 20}' />
+         data-parallax='{ "y" : -100, "smoothness": 50, "scale": 1.05, "rotateY": 20}' />
     </section>
 
     <section id="menu-list" class="blog section-menu text-center section-light">
@@ -260,7 +240,7 @@
         </div>
         <div class="overlay"></div>
         <img src="img/sample/food.jpg" class="background-image img-parallax"
-         data-parallax='{ "y" : -100, "smoothness": 100, "scale": 1.05, "rotateY": 20}' />
+         data-parallax='{ "y" : -100, "smoothness": 50, "scale": 1.05, "rotateY": 20}' />
     </section>
 
     <section id="menu-list-full" class="section-menu-full text-center section-light">
@@ -497,7 +477,7 @@
         </div>
         <div class="overlay"></div>
         <img src="img/int/vostok-2.jpg" class="background-image img-parallax"
-         data-parallax='{ "y" : -100, "smoothness": 100, "scale": 1.05, "rotateY": 20}' />
+         data-parallax='{ "y" : -100, "smoothness": 50, "scale": 1.05, "rotateY": 20}' />
     </section>
 
     <section class="section-padding-bottom section-light sign-up section-form">
@@ -586,9 +566,7 @@
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-    <script src="js/app.js"></script>
-    <script src="../sources/js/scroll.js"></script>
-    <script src="../sources/js/init.js"></script>
+    <script src="js/app.min.js"></script>
 
     <script>
     $(function() {

@@ -17,6 +17,7 @@
   "dependencies": {
     "animate.less": "*",
     "jquery.stellar": "~0.6.2",
-    "snackbarjs": "~1.0.0"
+    "snackbarjs": "~1.0.0",
+    "lightgallery": "~1.2.6"
   }
 }
