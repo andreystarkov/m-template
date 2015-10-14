@@ -34,7 +34,6 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,300italic,100,100italic,300,400italic,500,500italic,700,700italic,900,900italic&subset=latin,cyrillic" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,300italic,400italic,700,700italic&subset=latin,cyrillic" />
 
-    <link rel="stylesheet" href="fonts/robotodraft/font.css" />
     <link rel="stylesheet" href="css/styles.css" />
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
