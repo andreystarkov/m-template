@@ -31,6 +31,7 @@ var gulp = require('gulp'),
      'sources/libs/vivus/dist/vivus.min.js',
      'sources/libs/flexslider/jquery.flexslider-min.js',
      'sources/libs/fancybox/source/jquery.fancybox.js',
+     'sources/libs/lightgallery/dist/js/lightgallery.min.js',
      'sources/libs/vide/dist/jquery.vide.min.js',
      'sources/libs/wow/dist/wow.min.js',
      'sources/js/vendor/transit.min.js',
@@ -105,6 +106,7 @@ gulp.task('bootstrap', function() {
 gulp.task('css-concat', function() {
   return gulp.src([
     'sources/fonts/*.css',
+    'sources/libs/lightgallery/dist/css/*.css',
     'sources/libs/animate.css/animate.min.css',
     'sources/libs/bootstrap-material-design/dist/css/ripples.min.css',
     'sources/css/bootstrap.css',

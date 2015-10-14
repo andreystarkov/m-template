@@ -263,33 +263,83 @@ footer .social-share a.facebook-share:hover, footer .social-share a.facebook-sha
     margin-top:8px;
     margin-bottom:8px;
 }
+.lg-outer .lg-image {
+    max-height:auto !important;
+}
+.gallery {
+    .item {
+        margin-bottom:30px;
+    }
+    &.flat {
+        margin-bottom:0;
+        margin:0;
+        .item {
+            position:relative;
+            overflow:hidden;
+            margin:0;
+            margin-bottom:0;
+            padding-left:0;
+            padding-right:0;
+            img {
+                transition: transform 0.6s cubic-bezier(0.480, -0.260, 0.000, 1.140) 0s;
+            }
+            .overlay {
+                width:100%;
+                position:absolute;
+                left: 0; top:0; right:0; bottom:0;
+                background-color: #444;
+                opacity:0.3;
+                transition: opacity 0.4s cubic-bezier(0.980, -0.360, 0.000, 1.540) 0s;
+            }
+            &:hover {
+                .overlay { opacity:0; }
+                img { transform: scale(1.1); }
+            }
+        }
+    }
+}
 
 #instagram-header .overlay { opacity:0.45; }
 
 .section-content, #section-content {
-    h3,h4 {
-        font-family: 'Roboto';
+    h2,h3,h4,h5 {
+        font-family: RobotoDraft;
         text-align: left;
     }
+    h2 {
+        margin-bottom: 1.3em;
+        font-weight:500;
+    }
+    .intro-content h5 {
+        text-transform:none;
+        font-size: 1.3em;
+    }
     h3 {
-        font-size: 2.4em;
-        color: mix(#773434,#555,80%);
+        font-size: 2.1em;
+        color: darken(mix(#773434,#555,80%),25%);
         margin-bottom: 1.2em;
-        font-weight: 300;
+        font-weight: 400;
     }
     h4 {
-        font-size: 2.1em;
+        font-size: 1.7em;
         margin-bottom: 1em;
         font-weight: 400;
     }
+
+    h5 {
+        font-size: 1.4em;
+        color: darken(mix(#773434,#555,80%),25%);
+        margin-bottom: 1.2em;
+        font-weight: 400;
+    }
+
     p {
-        text-indent:30px;
         color: mix(#584b4a,@brownPaleGray,80%);
         font-size:1.1em;
-        font-weight: 300;
+        font-weight: 400;
     }
     b, strong {
-        font-weight:400;
+        font-weight:600;
         color: mix(#584b4a,@brownPaleGray,100%);
     }
 }

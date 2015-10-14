@@ -120,6 +120,17 @@ function loadBullshit(btn, what, where){
 }
 
 $(function() {
+
+    $('.gallery .item').each(function(){
+        $(this).append('<div class="overlay"></div>')
+    });
+    $("#gallery").lightGallery({
+        mode: 'lg-slide-vertical-growth',
+        cssEasing: 'cubic-bezier(0.25, 0, 0.25, 1)',
+        width: '100%',
+        thumbnail: 'false'
+    });
+
     $('top-slider .caption div').css({
         opacity: '0'
     });
