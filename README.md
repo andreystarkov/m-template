@@ -1,5 +1,3 @@
-# Адаптивный HTML5/LESS шаблон
+# HTML5/LESS/SVG/Gulp Template
 
-SVG-анимация, сборка, все дела
-
-[Демо](http://lab.andreystarkov.ru/m-template/)
+coming soon
