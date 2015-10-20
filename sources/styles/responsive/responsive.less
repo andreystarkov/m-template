@@ -1,8 +1,31 @@
 @import "mobile.less";
 @import "desktop.less";
 
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 1024px) {
 	.mobile-all();
+}
+
+@media only screen
+and (min-device-width : 480px)
+and (max-device-width : 1024px)  {
+    .section-light, .section-gray, .section-padding {
+        padding-left:35px;
+        padding-right:35px;
+    }
+    #page-header, .background-parallax {
+        .container {
+            z-index:7;
+        }
+        .background-image {
+            min-width:auto;
+            max-width:none !important;
+            min-height:100%;
+        }
+
+    }
+    .menu-link .caption .name {
+        font-size:1.3em;
+    }
 }
 
 .responsiveMax(@maxWidth; @rules) {
@@ -16,7 +39,7 @@
     }
 }
 
-.responsiveMax(991px, {
+.responsiveMax(1024px, {
 	.mobile-all();
 });
 

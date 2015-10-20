@@ -3,13 +3,14 @@
     .background-image {
         top:0;
         position:absolute;
-        max-width: 100%;
+        min-width: 100%;
         height: auto;
     }
     .overlay {
         z-index:1;
     }
 }
+
 .header-single {
     h2,h3 {
       color:fade(desaturate(#e2d9cd,5%),99%);
@@ -48,7 +49,7 @@
                 transition: 1.4s ease-in all;
                 margin-top:40px;
                 p {
-                    font-family: 'Roboto Condensed';
+                    font-family: @fontCaptionText;
                     font-size: 1.4em;
                     color: fade(@colorWhite,90%);
                     font-style: italic;

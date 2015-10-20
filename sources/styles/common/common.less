@@ -17,7 +17,6 @@ body {
     background:#111;
     width: 100%;
     font-size: 1.6em;
-    font-family: "Open Sans", sans-serif;
     color: #2c343b;
     background-color: @colorContentBackground;
 }
@@ -68,7 +67,6 @@ a:hover, a:focus {
   text-decoration: none; }
 
 body {
-  font-family: "Open Sans", sans-serif;
   font-weight: 300;
   color: rgba(28, 54, 83, 0.6);
   -webkit-text-size-adjust: 100%; }
@@ -303,7 +301,7 @@ footer .social-share a.facebook-share:hover, footer .social-share a.facebook-sha
 
 .section-content, #section-content {
     h2,h3,h4,h5 {
-        font-family: RobotoDraft;
+        font-family: @fontHeader;
         text-align: left;
     }
     h2 {
@@ -458,7 +456,7 @@ footer .social-share a.facebook-share:hover, footer .social-share a.facebook-sha
 }
 .sign-up .description {
     h5 {
-        font-family: 'Roboto';
+        font-family: @fontDefault;
         font-weight: 200;
         font-size:1.8em;
         text-transform: none;
@@ -466,10 +464,9 @@ footer .social-share a.facebook-share:hover, footer .social-share a.facebook-sha
     }
 
     p {
-        font-family: 'Roboto';
+        font-family: @fontDefault;
         font-weight: 200;
         font-size:1.05em;
-        font-style: italic;
     }
 }
 .blog-intro .rightcol {

@@ -4,3 +4,4 @@ _/
 *.zip
 *.rar
 *.7z
+build/

@@ -24,6 +24,7 @@ var gulp = require('gulp'),
 
     var JSFiles = [
      'sources/libs/classie/classie.js',
+     'sources/libs/picturefill/dist/picturefill.min.js',
      'sources/libs/bootstrap-material-design/dist/js/material.min.js',
      'sources/libs/bootstrap-material-design/dist/js/ripples.min.js',
      'sources/libs/jquery-waypoints/lib/jquery.waypoints.min.js',
@@ -162,6 +163,36 @@ gulp.task('images', function () {
         .pipe(gulp.dest('build/img'));
 });
 
+gulp.task('responsive', function() {
+  return gulp.src('./sources/img/int/*.jpg')
+    .pipe(responsive({
+      '*.jpg': [
+        { width:500,
+        rename: {
+          suffix:'-480'
+        }},{
+        width:1000,
+        rename: {
+          suffix:'-960'
+        }},{
+        width:1300,
+        rename: {
+          suffix:'-1280'
+        }
+      },{
+        width:1650,
+        rename: {
+          suffix:'-1600'
+        }
+      },{
+        width:1900,
+        rename: {
+          suffix:'-1900'
+        }
+      }]
+    }))
+    .pipe(gulp.dest('./build/img/int/'));
+});
 
 gulp.task('styles', function(callback) {
     runSequence(

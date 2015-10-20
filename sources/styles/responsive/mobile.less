@@ -1,4 +1,24 @@
 .mobile-all(){
+
+
+	.nav-toggle { padding: 25px 50px 28px 15px; background: fade(mix(@colorBrown, #000, 50%), 40%); }
+	#top-navigation .logo { display: none !important; }
+	.section-menu .container-menu .row:nth-child(even) { background-color: transparent !important; }
+	.section-menu .container-menu .row .menu-post { margin-top:14px; margin-bottom: 14px; }
+	.section-menu .menu-link .caption .about { max-width: 90%; }
+	.btn-topnav-toggle {display:none !important; }
+
+	#page-header {
+		.caption {
+			font-size:12px;
+			.svg-logo .description p {
+				font-size:1.1em;
+				line-height:1.6em;
+			}
+		}
+	}
+	.header-single .caption .svg-logo { max-width: 80%; }
+
 	header {
 		width: 90%;
 		.nav-wrapper {
@@ -189,6 +209,17 @@
 } // mobile-all
 
 .mobile-medium(){
+	#page-header {
+	    .background-image {
+	        top:0;
+	        width:auto;
+	        position:absolute;
+	        z-index: 6;
+	        min-width:auto;
+	        min-height:100%;
+	    }
+
+	}
 	footer {
 		ul.footer-group {
 			border-top: none;
@@ -210,6 +241,7 @@
 } // mobile-medium
 
 .mobile-small(){
+
 	.hero {
 		.hero-content {
 			padding-top: 41%;
