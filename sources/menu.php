@@ -321,15 +321,6 @@
                 $('#menu-list .container-menu').append(data);
             });
         }
-        function loadMenuSamples2(){
-            $.post('testing.php', {
-                'page': 1,
-                'what': 'menu'
-            }, function(data) {
-                $('#menu-list-full .container-menu').append(data);
-            });
-        }
-        loadMenuSamples2();loadMenuSamples2();loadMenuSamples2();loadMenuSamples2();
         loadMenuSamples(); loadMenuSamples();loadMenuSamples();loadMenuSamples();
     });
 
