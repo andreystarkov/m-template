@@ -24,6 +24,27 @@
     }
 }(jQuery));
 
+var isMobile = {
+    Android: function() {
+        return navigator.userAgent.match(/Android/i);
+    },
+    BlackBerry: function() {
+        return navigator.userAgent.match(/BlackBerry/i);
+    },
+    iOS: function() {
+        return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+    },
+    Opera: function() {
+        return navigator.userAgent.match(/Opera Mini/i);
+    },
+    Windows: function() {
+        return navigator.userAgent.match(/IEMobile/i) || navigator.userAgent.match(/WPDesktop/i);
+    },
+    any: function() {
+        return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+    }
+};
+
 function initScreen() {
     $('.cd-hero-slider li .overlay').css({
         backgroundColor: 'rgba(30,28,27,0.5)'
@@ -119,6 +140,12 @@ function loadBullshit(btn, what, where){
     });
 }
 
+function responsiveImageParallax(obj, nameImg, options){
+    var pic = '<img srcset="'+nameImg+'-tiny.jpg 320w,'+nameImg+'-xsmall.jpg 480w, '+nameImg+'-small.jpg 640w, '+nameImg+'-medium.jpg w768, '+nameImg+'-medium.jpg 1024w, '+nameImg+'-laptop.jpg 1200w, '+nameImg+'-large.jpg 1400w,'+nameImg+'-xlarge.jpg 1600w,'+nameImg+'-full.jpg w1900" class="background-image img-parallax" data-parallax="'+options+'">';
+    console.log(pic);
+    $(obj).append(pic);
+}
+
 $(function() {
 
     $('.gallery .item').each(function(){
@@ -135,12 +162,19 @@ $(function() {
         opacity: '0'
     });
 
+    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
+        alert('mobile');
+    } else console.log('desk');
+
     $('#recent').pongstgrm({
         accessId: '1590265550',
         accessToken: '1590265550.d8874ae.f5c1cbb59f6a4d09bf2e5ae4e6034d4f',
         show: 'recent'
     });
 
+    $('.section-pictures .thumb').each(function() {
+        $(this).append('<div class="overlay"></div>')
+    });
     $('.cd-slider-nav li').each(function() {
         $(this).css({
             'height': $('.cd-slider-nav').height()
@@ -149,6 +183,8 @@ $(function() {
 
     svgDraw('svg-icon-wine', '.intro-feature', 'async', 160);
     svgDraw('svg-icon-gift', '.intro-feature', 'async', 160);
+
+
     svgDraw('svg-icon-heart', '.intro-feature', 'async', 160);
     svgDraw('svg-icon-news', '.container-news', 'async', 200);
     svgDraw('svg-icon-mail', '.section-form', 'async', 200);

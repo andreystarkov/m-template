@@ -25,11 +25,77 @@ body { background-color: #777; }
 	z-index: 2;
 }
 
-
 @menuCaptionBackground:#E0C28F;
 
 @menuAccent: #392323;
 
+#about-map {
+    .about-icons .about-item i, .about-icons .about-item span, .about-icons .about-item .subscribe {
+    color: fade(mix(#773434,#1E1C1B,30%),80%);
+    }
+}
+
+#page-slider {
+    .svg-logo { margin: 0 auto; }
+    .caption .description span {
+        width:80%;
+        color: #e8e2db;
+        font-style: normal;
+        display:inline-block;
+        font-family: RobotoDraft;
+        font-size: 1.2em;
+        line-height: 1.5em;
+        font-weight: 300;
+        font-style: italic
+    }
+    .slider-content-full {
+        padding-top:190px;
+    }
+    .overlay {
+        opacity:0.4;
+    }
+
+}
+.icon-nav {
+    font-size:60px;
+    display:block;
+}
+
+.section-header p {
+    font-size:1.1em;
+    display: inline-block;
+    margin-top:25px;
+}
+
+.section-pictures {
+    .thumb {
+        overflow:hidden;
+        padding-left:0;
+        padding-right:0;
+        cursor: pointer;
+        img {
+            width:100%;
+            transition: 0.5s ease-in-out all;
+        }
+        .overlay {
+            background: fade(#1E1C1B,40%);
+            width:100%;
+            height:100%;
+            position:absolute;
+            left:0;top:0;bottom:0;right:0;
+            transition: 0.5s ease-in-out all;
+        }
+        &:hover {
+            .overlay {
+                opacity:0;
+            }
+            img {
+                transform: scale(1.1);
+            }
+        }
+    }
+
+}
 .section-menu figure {
     margin: 0 0;
 }

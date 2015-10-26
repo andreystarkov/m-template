@@ -32,7 +32,7 @@
     // ===========================
     , preload:          "spinner"
     , button:           "btn btn-ghost btn-accent btn-small btn-more"
-    , buttontext:       "<span class='mdi-action-autorenew'></span> Загрузить ещё фотографий"
+    , buttontext:       "<span class='ln-icon-refresh'></span> Загрузить ещё фотографий"
     , column:           "inst-item col-xs-6  col-sm-4 col-md-3 col-lg-2"
     , likeicon:         "glyphicon glyphicon-heart"
     , muteicon:         "glyphicon glyphicon-volume-off"

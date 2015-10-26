@@ -1,4 +1,6 @@
 libs/
 sftp-config.json
 video/
+img/photos/
+photos/
 test*.*

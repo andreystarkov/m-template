@@ -32,7 +32,7 @@
 
      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,300italic,400italic,700,700italic&subset=latin,cyrillic" />
 
-    <link rel="stylesheet" href="css/styles.min.css" />
+    <link rel="stylesheet" href="css/styles.css" />
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
 </head>
@@ -207,7 +207,7 @@
                     </div>
                 </div>
             </li>
-            <li style="background-image:url(images/comfort/rooms/7W2A1622-1600-large.jpg">
+            <li style="background-image:url(images/comfort/rooms/7W2A1622-1600-large.JPG">
                 <div class="overlay"></div>
                 <div class="slider-content slider-content-full">
                     <div class="caption caption-left">

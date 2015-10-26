@@ -1,42 +1,6 @@
-<?
-
-    function includeSVG($svg){
-        include "img/svg/".$svg;
-   }
-
-?><!doctype html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-
-    <title>M-Restorator Tmpl 1</title>
-
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-touch-fullscreen" content="yes" />
-    <meta name="apple-mobile-web-app-title" content="M-Restorator">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-
-    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
-
-    <link rel="apple-touch-icon" href="img/ico-72.png">
-    <link rel="icon" type="image/png" href="img/ico-32.png" sizes="32x32" />
-    <link rel="icon" type="image/png" href="img/ico-16.png" sizes="16x16" />
-
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,300italic,400italic,700,700italic&subset=latin,cyrillic" />
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />
-
-    <link rel="stylesheet" href="css/styles.min.css" />
-
-    <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
-</head>
-<body id="top">
-
+<? include "../_/functions.php";
+   head();
+?>
         <section class="navigation top-navigation" id="top-navigation">
             <header>
                 <div class="header-content">
@@ -132,24 +96,6 @@
         </div>
     </section>
 
-    <section class="section-background section-padding background-parallax" style="background-image: url(img/sample/food-1.jpg" id="menu-list-header">
-        <div class="container">
-            <div class="col-md-6 text-center">
-                <h2>Ознакомтесь с нашим невероятным меню</h2>
-                <p>Вкуснее только в космосе, а вообще пшеничные булочки в плетеной корзиночке, которые можно обмакнуть в пикантный соус из оливкового масла и бальзамического уксуса,</p>
-            </div>
-            <div class="col-md-6 text-center">
-                <div class="logo-placeholder-big floating-logo logo-background">
-                <svg id="icon-fishwine" class="icon-fish" viewBox="0 0 400 400">
-                    <use xlink:href="#svg-fishwine" />
-                </svg>
-                </div>
-            </div>
-        </div>
-        <div class="overlay"></div>
-        <img src="images/fish/food/7W2A1501-1600-large.jpg" class="background-image img-parallax"
-         data-parallax='{ "y" : -100, "smoothness": 50, "scale": 1.05, "rotateY": 20}' />
-    </section>
 
     <section id="menu-list-full" class="section-menu-full text-center section-light">
         <div class="container container-menu">
@@ -407,19 +353,5 @@
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <script src="js/app.min.js"></script>
 
-    <script>
-    $(function() {
-        function loadMenuSamples(){
-            $.post('testing.php', {
-                'page': 1,
-                'what': 'menu'
-            }, function(data) {
-                $('#menu-list-full .container-menu').append(data);
-            });
-        }
-        loadMenuSamples();loadMenuSamples();loadMenuSamples();loadMenuSamples();
-    });
-
-    </script>
 </body>
 </html>

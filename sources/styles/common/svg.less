@@ -609,21 +609,23 @@ svg.svg-done * {
   .svg-mamamo-active;
 }
 
+@defaultFn: cubic-bezier(0,.44,1,0.79);
+
 .logo-grill {
   width:90%;
 
   @keyframes bottle {
-    0% { transform: rotate(0deg) translateY(0px)  rotateY(0deg) scale(1); }
-    25% { transform: rotate(6deg) translateY(1px) rotateY(-10deg) scale(1.05); }
-    50% { transform: rotate(-3deg) translateY(5px) rotateY(-5deg) scale(1.1); }
-
-    100% { transform: rotate(0deg) translateY(0px)  rotateY(0deg) scale(1); }
+    0% { transform: rotate(0deg) translateY(2px)  rotateY(0deg) scale(1); }
+    25% { transform: rotate(6deg) translateY(3px) rotateY(-4deg) scale(1.05);
+    }
+    50% { transform: rotate(-3deg) translateY(5px) rotateY(2deg) scale(1.1); }
+    100% { transform: rotate(0deg) translateY(2px)  rotateY(0deg) scale(1); }
   }
   @keyframes vines {
-    0% { transform: rotate(0deg) translateY(0px)  rotateY(0deg) scale(1); }
-    25% { transform: rotate(-6deg) translateY(4px) rotateY(-25deg) scale(1.1); }
-    75% { transform: rotate(4deg) translateY(3px)  rotateY(-14deg) scale(1.15); }
-    100% { transform: rotate(0deg) translateY(0px)  rotateY(0deg) scale(1); }
+    0% { transform: rotate(0deg) translateY(5px)  rotateY(0deg) scale(1); }
+    25% { transform: rotate(-6deg) translateY(4px) rotateY(-9deg) scale(1.1) perspective(80px); fill: darken(#8F2F1F,5%); }
+    75% { transform: rotate(4deg) translateY(1px) rotateY(3deg) scale(1.15) perspective(80px); fill: lighten(#8F2F1F,5%); }
+    100% { transform: rotate(0deg) translateY(5px) rotateY(0deg) scale(1); }
   }
   @keyframes first {
     0% { transform: rotate(0deg) translateY(0px)  rotateY(0deg) scale(1); }
@@ -634,6 +636,10 @@ svg.svg-done * {
 
   .icon-grill {
     width:100%;
+    .contour {
+       transform-origin: 100% 50%;
+       animation: stroke-run-alt 8s @defaultFn infinite;
+    }
   }
   .icon-grill .second-1 {
     transform-origin: bottom center;
@@ -651,27 +657,68 @@ svg.svg-done * {
   @keyframes floating-fish {
     0%   {
       fill: lighten(#004753,15%);
-      stroke: fade(#fff,60%);
+      stroke: fade(#fff,30%);
       transform: scale(1) rotateY(0) rotateX(0) translateY(0);
       stroke-width: 2px;
     }
     25%  {
-      fill: lighten(#004753,45%);
+      fill: lighten(#004753,35%);
       stroke: fade(#fff,40%);
-      transform: scale(1) rotateY(-15deg) rotateX(5deg) translateY(-16px);
+      transform
+      transform: scale(1) rotateY(-15deg) rotateX(5deg) translateY(-16px) perspective(15px) rotateX(-20deg);
       stroke-width: 2px;
     }
     75%  {
-      fill: lighten(#004753,63%);
+      fill: lighten(#004753,43%);
       stroke: fade(#fff,50%);
-      transform: scale(1.1) rotateY(5deg) rotateX(-9deg)  translateY(-5px);
+      transform: scale(1.1) rotateY(5deg) rotateX(-4deg) translateY(-5px) perspective(5px);
       stroke-width: 2px;
     }
    100%   {
-      fill: lighten(#004753,15%);
-      stroke: fade(#fff,60%);
+      fill: lighten(#004753,55%);
+      stroke: fade(#fff,30%);
       transform: scale(1) rotateY(0) rotateX(0) translateY(0);
       stroke-width: 2px;
+    }
+  }
+  @keyframes stroke-run-alt {
+    0% {
+      stroke-width: 1px;
+      fill:fade(#e8e2db, 30%);
+      stroke-dashoffset: 20;
+      stroke-dasharray: 50;
+      stroke: fade(#fff,50%);
+    }
+    30% {
+      stroke-width: 2px;
+      stroke-dashoffset: 60;
+      fill:fade(#e8e2db, 40%);
+      stroke-dasharray: 80;
+      .text { fill: rgba(255,255,255,.9); }
+      stroke: fade(#fff,20%);
+    }
+    50% {
+      stroke-width: 1px;
+      fill:fade(#e8e2db, 10%);
+      stroke-dashoffset: 120;
+      stroke-dasharray: 80;
+      .text { fill: rgba(255,255,255,1); }
+      stroke: fade(#fff,45%);
+    }
+    75% {
+      stroke-width: 2px;
+      fill:fade(#e8e2db, 60%);
+      stroke-dashoffset: 170;
+      stroke-dasharray: 30;
+      .text { fill: rgba(255,255,255,.9); }
+      stroke: fade(#fff,35%);
+    }
+    100% {
+      stroke-width: 1px;
+      fill:fade(#e8e2db, 30%);
+      stroke-dashoffset: 20;
+      stroke-dasharray: 50;
+      stroke: fade(#fff,50%);
     }
   }
 

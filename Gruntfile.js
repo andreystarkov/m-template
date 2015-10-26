@@ -1,37 +1,54 @@
 module.exports = function(grunt) {
-
 grunt.initConfig({
   responsive_images: {
     responsive: {
       options: {
-        sizes: [{
-          width: 480
-        },
-        {
-          width: 640
-        },
-        {
-          width: 960
-        },
-        {
-          width: 1280
-        },
-        {
-          width: 1600
-        },
-        {
-          width: 1900
-        }
-			]
+        rename: true,
+        quality: 66,
+        sizes: [
+          {
+            width: 320,
+            name: 'tiny'
+          },
+          {
+            width: 480,
+            name: 'xsmall'
+          },
+          {
+            width: 768,
+            name: 'small'
+          },
+          {
+            width: 1024,
+            name: 'medium'
+          },
+          {
+            width: 1200,
+            name: 'laptop'
+          },
+          {
+            width: 1400,
+            name: 'large'
+          },
+          {
+            width: 1600,
+            name: 'xlarge'
+          },
+          {
+            width: 1900,
+            name: 'full'
+          }
+        ]
       },
       files: [{
         expand: true,
-        src: ['sources/img/int/**.{jpg,gif,png}'],
-        dest: './test/'
+        src: ['./sources/photos/**/*.{jpg,JPG}'],
+        dest: './build/img'
       }]
     }
-  },
-})
+  }
+});
+
 
 	grunt.loadNpmTasks('grunt-responsive-images');
 

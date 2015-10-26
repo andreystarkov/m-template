@@ -94,7 +94,7 @@
         </div>
         <div class="down-arrow floating-arrow"><a href="#"><i class="fa fa-angle-down"></i></a></div>
         <div class="overlay"></div>
-        <img src="img/int/chetverg-1.jpg" class="background-image img-parallax"
+        <img src="images/chetverg/rooms/7W2A1309-1600-large.JPG" class="background-image img-parallax"
         data-parallax='{"y" : 350,"scale": 1.05, "distance":300}' />
     </section>
 
@@ -145,23 +145,23 @@
             <h4>Фотографии</h4>
 
             <div class="row gallery flat" id="gallery">
-                <a class="col-md-4 item" href="img/slides/1.jpg">
-                    <img class="img-responsive" src="img/slides/1.jpg" />
+                <a class="col-md-4 item" href="images/chetverg/details/7W2A1305-1900-xlarge.JPG">
+                    <img class="img-responsive" src="images/chetverg/details/7W2A1305-350-thumb.JPG" />
                 </a>
-                <a class="col-md-4 item" href="img/int/vostok-2.jpg">
-                    <img class="img-responsive" src="img/int/vostok-2.jpg" />
+                <a class="col-md-4 item" href="images/chetverg/details/7W2A1324-1900-xlarge.JPG">
+                    <img class="img-responsive" src="images/chetverg/details/7W2A1324-350-thumb.JPG" />
                 </a>
-                <a class="col-md-4 item" href="img/fish/1.jpg">
-                    <img class="img-responsive" src="img/fish/1.jpg" />
+                <a class="col-md-4 item" href="images/chetverg/details/7W2A1328-1900-xlarge.JPG">
+                    <img class="img-responsive" src="images/chetverg/details/7W2A1328-350-thumb.JPG" />
                 </a>
-                <a class="col-md-4 item" href="img/int/chetverg-1.jpg">
-                    <img class="img-responsive" src="img/int/chetverg-1.jpg" />
+                <a class="col-md-4 item" href="images/chetverg/details/7W2A1346-1900-xlarge.JPG">
+                    <img class="img-responsive" src="images/chetverg/details/7W2A1346-350-thumb.JPG" />
                 </a>
-                <a class="col-md-4 item" href="img/int/mamamo-1.jpg">
-                    <img class="img-responsive" src="img/int/mamamo-1.jpg" />
+                <a class="col-md-4 item" href="images/chetverg/rooms/7W2A1309-1900-xlarge.JPG">
+                    <img class="img-responsive" src="images/chetverg/rooms/7W2A1309-350-thumb.JPG" />
                 </a>
-                <a class="col-md-4 item" href="img/slides/3.jpg">
-                    <img class="img-responsive" src="img/slides/3.jpg" />
+                <a class="col-md-4 item" href="images/chetverg/rooms/7W2A1313-1900-xlarge.JPG">
+                    <img class="img-responsive" src="images/chetverg/rooms/7W2A1313-350-thumb.JPG" />
                 </a>
             </div>
         </div>
@@ -183,8 +183,8 @@
             </div>
         </div>
         <div class="overlay"></div>
-        <img src="img/sample/food-1.jpg" class="background-image img-parallax"
-         data-parallax='{ "y" : -100, "smoothness": 50, "scale": 1.05, "rotateY": 20}' />
+        <img src="images" class="background-image img-parallax"
+         data-parallax='{ "y" : -150, "smoothness": 50, "scale": 1.15}' />
     </section>
 
     <section class="section-padding-bottom section-light sign-up section-form">
